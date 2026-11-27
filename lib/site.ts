@@ -1,3 +1,4 @@
+import { asset } from "@/lib/base";
 export const site = {
   name: "Kaspian Partners",
   tagline: "Independent commercial real estate advice. Built without Conflict.",
@@ -21,24 +22,24 @@ export const brands = [
     key: "assetadvantage",
     name: "AssetAdvantage",
     href: "/assetadvantage/",
-    logo: "/logos/assetadvantage-logo.svg",
-    logoDark: "/logos/assetadvantage-logo-dark.svg",
+    logo: asset("/logos/assetadvantage-logo.svg"),
+    logoDark: asset("/logos/assetadvantage-logo-dark.svg"),
     line: "Managed asset services for owners.",
   },
   {
     key: "navig8",
     name: "Navig8",
     href: "/navig8/",
-    logo: "/logos/navig8-logo.svg",
-    logoDark: "/logos/navig8-logo-dark.svg",
+    logo: asset("/logos/navig8-logo.svg"),
+    logoDark: asset("/logos/navig8-logo-dark.svg"),
     line: "Independent occupier advisory.",
   },
   {
     key: "proptattva",
     name: "Proptattva",
     href: "/proptattva/",
-    logo: "/logos/proptattva-logo.svg",
-    logoDark: "/logos/proptattva-logo-dark.svg",
+    logo: asset("/logos/proptattva-logo.svg"),
+    logoDark: asset("/logos/proptattva-logo-dark.svg"),
     line: "Intelligence to enable.",
   },
 ];
@@ -46,19 +47,19 @@ export const brands = [
 export type Person = { name: string; role: string; photo?: string; linkedin?: string };
 
 export const partners: Person[] = [
-  { name: "Rahul Arora", role: "Founder & Managing Partner", photo: "/team/RA2_249x312.png", linkedin: "https://www.linkedin.com/in/raahularora/" },
-  { name: "Karan Panjwani", role: "Founding Partner", photo: "/team/KP1_249x312.png", linkedin: "#" },
-  { name: "Jobby N George", role: "Founding Partner", photo: "/team/JG2_249x312.png", linkedin: "#" },
-  { name: "Rohan Sharma", role: "Founding Partner", photo: "/team/RS2_249x312.png", linkedin: "#" },
-  { name: "Sahil Nagpal", role: "Founding Partner", photo: "/team/Sahil.png", linkedin: "#" },
+  { name: "Rahul Arora", role: "Founder & Managing Partner", photo: asset("/team/RA2_249x312.png"), linkedin: "https://www.linkedin.com/in/raahularora/" },
+  { name: "Karan Panjwani", role: "Founding Partner", photo: asset("/team/KP1_249x312.png"), linkedin: "#" },
+  { name: "Jobby N George", role: "Founding Partner", photo: asset("/team/JG2_249x312.png"), linkedin: "#" },
+  { name: "Rohan Sharma", role: "Founding Partner", photo: asset("/team/RS2_249x312.png"), linkedin: "#" },
+  { name: "Sahil Nagpal", role: "Founding Partner", photo: asset("/team/Sahil.png"), linkedin: "#" },
 ];
 
 export const foundingTeam: Person[] = [
-  { name: "Sneha Mohan", role: "AssetAdvantage", photo: "/team/SM1_249x312.png", linkedin: "#" },
-  { name: "Shabeer Abdulkareem", role: "Navig8", photo: "/team/SA1_249x312.png", linkedin: "#" },
-  { name: "Akhil Anil", role: "AssetAdvantage", photo: "/team/AA1_249x312.png", linkedin: "#" },
-  { name: "Vineet Malayil", role: "AssetAdvantage", photo: "/team/VM1_249x312.png", linkedin: "#" },
-  { name: "Umesh Gera", role: "AssetAdvantage", photo: "/team/Gera.png", linkedin: "#" },
+  { name: "Sneha Mohan", role: "AssetAdvantage", photo: asset("/team/SM1_249x312.png"), linkedin: "#" },
+  { name: "Shabeer Abdulkareem", role: "Navig8", photo: asset("/team/SA1_249x312.png"), linkedin: "#" },
+  { name: "Akhil Anil", role: "AssetAdvantage", photo: asset("/team/AA1_249x312.png"), linkedin: "#" },
+  { name: "Vineet Malayil", role: "AssetAdvantage", photo: asset("/team/VM1_249x312.png"), linkedin: "#" },
+  { name: "Umesh Gera", role: "AssetAdvantage", photo: asset("/team/Gera.png"), linkedin: "#" },
 ];
 
 export const specialists: Person[] = [

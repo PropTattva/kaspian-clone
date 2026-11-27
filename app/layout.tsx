@@ -1,3 +1,4 @@
+import { asset } from "@/lib/base";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Header from "@/components/Header";
@@ -14,13 +15,13 @@ export const metadata: Metadata = {
   description:
     "Independent commercial real estate advice. Built without conflict. Commercial real estate expertise for owners and occupiers, carried through to execution.",
   icons: {
-    icon: "/logos/kaspian-favicon-32x32.png",
-    apple: "/logos/kaspian-favicon-180x180.png",
+    icon: asset("/logos/kaspian-favicon-32x32.png"),
+    apple: asset("/logos/kaspian-favicon-180x180.png"),
   },
   openGraph: {
     type: "website",
     siteName: "Kaspian Partners",
-    images: ["/images/kaspian-og.jpg"],
+    images: [asset("/images/kaspian-og.jpg")],
   },
 };
 

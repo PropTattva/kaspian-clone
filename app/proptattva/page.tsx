@@ -1,3 +1,4 @@
+import { asset } from "@/lib/base";
 import type { Metadata } from "next";
 import { ComingSoon } from "@/components/sections";
 
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 export default function ProptattvaPage() {
   return (
     <ComingSoon
-      logo="/logos/proptattva-logo.svg"
+      logo={asset("/logos/proptattva-logo.svg")}
       name="Proptattva"
       line="Kaspian’s proprietary data platform for evidence based decisions"
     />

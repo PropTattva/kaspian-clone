@@ -1,3 +1,4 @@
+import { asset } from "@/lib/base";
 import Link from "next/link";
 import { nav, site } from "@/lib/site";
 
@@ -23,7 +24,7 @@ export default function Footer() {
       <div className="footer__pattern" aria-hidden="true" />
       <div className="container footer__grid">
         <div className="footer__brand">
-          <img src="/logos/kaspian-logo-white.webp" alt="Kaspian Partners" width={200} height={67} />
+          <img src={asset("/logos/kaspian-logo-white.webp")} alt="Kaspian Partners" width={200} height={67} />
           <p>{site.tagline}</p>
           <ul className="footer__social">
             {social.map((s) => (

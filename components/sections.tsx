@@ -1,3 +1,4 @@
+import { asset } from "@/lib/base";
 import Link from "next/link";
 import { brands, site, type Person } from "@/lib/site";
 import { Button, Eyebrow, Title } from "./ui";
@@ -8,7 +9,7 @@ export function ClosingCta({
   first = "A real estate decision ahead?",
   second = "Let’s get it right.",
   copy = "Tell us what you need. We’ll assign the right team to move it forward.",
-  image = "/images/kaspian-about-partners.webp",
+  image = asset("/images/kaspian-about-partners.webp"),
   imageAlt = "Open-plan office with city views",
   button = "Speak to a partner",
 }: {

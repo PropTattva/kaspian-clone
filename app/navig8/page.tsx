@@ -1,3 +1,4 @@
+import { asset } from "@/lib/base";
 import type { Metadata } from "next";
 import { ComingSoon } from "@/components/sections";
 
@@ -7,5 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function Navig8Page() {
-  return <ComingSoon logo="/logos/navig8-logo.svg" name="Navig8" line="Independent occupier advisory" />;
+  return <ComingSoon logo={asset("/logos/navig8-logo.svg")} name="Navig8" line="Independent occupier advisory" />;
 }

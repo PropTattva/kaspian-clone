@@ -1,5 +1,6 @@
 "use client";
 
+import { asset } from "@/lib/base";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -35,7 +36,7 @@ export default function Header() {
       </a>
       <div className="header__inner">
         <Link href="/" className="header__logo" aria-label="Kaspian Partners home">
-          <img src="/logos/kaspian-logo-navy.webp" alt="Kaspian Partners" width={180} height={60} />
+          <img src={asset("/logos/kaspian-logo-navy.webp")} alt="Kaspian Partners" width={180} height={60} />
         </Link>
 
         <nav className="header__nav" aria-label="Main">

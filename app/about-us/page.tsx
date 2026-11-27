@@ -1,3 +1,4 @@
+import { asset } from "@/lib/base";
 import type { Metadata } from "next";
 import { Button, Eyebrow, Title } from "@/components/ui";
 import { ClosingCta, PersonCard } from "@/components/sections";
@@ -50,7 +51,7 @@ export default function AboutPage() {
           </div>
           <div className="statphoto reveal">
             <img
-              src="/images/kaspian-home-contact-meeting.webp"
+              src={asset("/images/kaspian-home-contact-meeting.webp")}
               alt="Partners meeting in an office overlooking the city skyline"
               loading="lazy"
             />
@@ -153,7 +154,7 @@ export default function AboutPage() {
         second="what comes next."
         copy="Bring us a property requirement. We will connect you with the right partner."
         button="Discuss a requirement"
-        image="/images/kaspian-about-cta.webp"
+        image={asset("/images/kaspian-about-cta.webp")}
         imageAlt="Two advisers walking through an office building"
       />
 

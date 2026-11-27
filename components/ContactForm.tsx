@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState, type FormEvent } from "react";
 import { site } from "@/lib/site";
 import { Arrow } from "./ui";
@@ -67,7 +68,7 @@ export default function ContactForm() {
         <input type="checkbox" required />
         <span>
           I agree to Kaspian Partners storing my details to respond to this enquiry, as described in the{" "}
-          <a href="/privacy-policy/">privacy policy</a>.
+          <Link href="/privacy-policy/">privacy policy</Link>.
         </span>
       </label>
       <button type="submit" className="btn btn--filled">

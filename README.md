@@ -10,6 +10,7 @@ A rebuild of [kaspianpartners.com](https://kaspianpartners.com/) (currently Word
 | `/about-us/` | Why we built Kaspian, rolling "100+ years" stat, vision & values, partners, founding team, specialists |
 | `/assetadvantage/` | Managed asset services, what we manage, five non-negotiables, 14-day assessment |
 | `/navig8/`, `/proptattva/` | Coming-soon brand pages |
+| `/assetadvantage/assets/<slug>/` | One managed asset: facts, plans, specifications, connectivity, with an Active / Delivered switcher |
 | `/get-in-touch/` | Enquiry form + careers |
 | `/privacy-policy/` | Placeholder policy (replace with approved copy) |
 
@@ -24,6 +25,15 @@ npm start            # serves ./out
 
 `out/` is plain HTML/CSS/JS and can be deployed to Vercel, Netlify, Cloudflare Pages, S3 or any static host.
 
+## Deploy
+
+Every push to `main` builds and publishes the site to GitHub Pages (`.github/workflows/pages.yml`) at
+`https://proptattva.github.io/kaspian-clone/`.
+
+Project Pages live under a sub-path, so the workflow sets `NEXT_PUBLIC_BASE_PATH=/kaspian-clone`. Next adds it to `<Link>` hrefs;
+files in `public/` referenced from code go through `asset()` in `lib/base.ts`, and CSS images and fonts are bundled from `public/`.
+Locally the base path is empty. To host at a domain root instead, leave `NEXT_PUBLIC_BASE_PATH` unset.
+
 ## Structure
 
 ```
@@ -37,6 +47,8 @@ components/
   Reveal.tsx         scroll-in animation (adds .is-visible to .reveal elements)
   ContactForm.tsx
 lib/site.ts          nav, contact details, brands, team data: edit content here
+lib/assets.ts        managed assets (active / delivered) shown on AssetAdvantage and their detail pages
+lib/base.ts          asset() prefixes /public paths with the deploy base path
 public/              images, logos, Aileron font files, team headshots
 ```
 

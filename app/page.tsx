@@ -1,3 +1,4 @@
+import { asset } from "@/lib/base";
 import Link from "next/link";
 import { Button, Eyebrow, Title } from "@/components/ui";
 import { BrandFamily, ClosingCta } from "@/components/sections";
@@ -20,7 +21,7 @@ const pillars = [
 const firms = [
   {
     eyebrow: "For owners & investors",
-    logo: "/logos/assetadvantage-logo.svg",
+    logo: asset("/logos/assetadvantage-logo.svg"),
     name: "AssetAdvantage",
     title: "Turn space into income.",
     copy: [
@@ -28,29 +29,29 @@ const firms = [
       "Start with a 14-day assessment: market evidence, occupier fit and a recommended plan.",
     ],
     cta: { href: "/assetadvantage/", label: "Explore AssetAdvantage" },
-    image: "/images/kaspian-home-aa.webp",
+    image: asset("/images/kaspian-home-aa.webp"),
     alt: "Asset team reviewing leasing data at their desks",
   },
   {
     eyebrow: "For corporate occupiers",
-    logo: "/logos/navig8-logo.svg",
+    logo: asset("/logos/navig8-logo.svg"),
     name: "Navig8",
     title: "The business need comes first.",
     copy: [
       "We assess requirements, economics and options, then support implementation with your team and brokers.",
     ],
     soon: true,
-    image: "/images/kaspian-home-n8.webp",
+    image: asset("/images/kaspian-home-n8.webp"),
     alt: "Open-plan office with a city view",
   },
   {
     eyebrow: "Property intelligence",
-    logo: "/logos/proptattva-logo.svg",
+    logo: asset("/logos/proptattva-logo.svg"),
     name: "Proptattva",
     title: "Intelligence to enable",
     copy: ["The technology and data platform within the Kaspian family."],
     soon: true,
-    image: "/images/kaspian-proptattva-meeting.webp",
+    image: asset("/images/kaspian-proptattva-meeting.webp"),
     alt: "Team meeting by a window overlooking the city skyline",
   },
 ];
@@ -60,7 +61,7 @@ export default function HomePage() {
     <>
       {/* Hero */}
       <section className="hero">
-        <img className="hero__bg" src="/images/kaspian-home-slide-2.webp" alt="" />
+        <img className="hero__bg" src={asset("/images/kaspian-home-slide-2.webp")} alt="" />
         <div className="hero__shade" aria-hidden="true" />
         <div className="hero__pattern" aria-hidden="true" />
         <div className="container hero__inner">
@@ -103,7 +104,7 @@ export default function HomePage() {
       {/* Photo band */}
       <section className="photo-band reveal">
         <img
-          src="/images/kaspian-home-office.webp"
+          src={asset("/images/kaspian-home-office.webp")}
           alt="Kaspian team at work in an open office overlooking the city"
           loading="lazy"
         />

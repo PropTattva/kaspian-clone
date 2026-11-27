@@ -1,6 +1,8 @@
+import { asset } from "@/lib/base";
 import type { Metadata } from "next";
 import { Button, Eyebrow, Title } from "@/components/ui";
 import { ClosingCta } from "@/components/sections";
+import AssetsShowcase from "@/components/assets/AssetsShowcase";
 
 export const metadata: Metadata = {
   title: "AssetAdvantage: Managed Asset Services",
@@ -57,16 +59,18 @@ export default function AssetAdvantagePage() {
         <div className="page-hero__pattern" aria-hidden="true" />
         <div className="container split split--center">
           <div className="reveal">
-            <img src="/logos/assetadvantage-logo.svg" alt="AssetAdvantage" className="page-hero__logo" />
+            <img src={asset("/logos/assetadvantage-logo.svg")} alt="AssetAdvantage" className="page-hero__logo" />
             <Title as="h1" first="Your asset deserves" second="its exclusive team." className="title--hero" />
           </div>
           <div className="page-hero__media reveal">
-            <img src="/images/kaspian-aa-intro.webp" alt="Asset team reviewing leasing data" />
+            <img src={asset("/images/kaspian-aa-intro.webp")} alt="Asset team reviewing leasing data" />
           </div>
         </div>
       </section>
 
-      <section className="section">
+      <AssetsShowcase />
+
+      <section className="section section--tint">
         <div className="container split">
           <div className="reveal">
             <Eyebrow>A senior team. Dedicated to your asset.</Eyebrow>
@@ -83,7 +87,7 @@ export default function AssetAdvantagePage() {
         </div>
       </section>
 
-      <section className="section section--tint">
+      <section className="section section--plain">
         <div className="container">
           <div className="section-head reveal">
             <Title first="One accountable team." second="On your asset alone." className="title--xl" />
@@ -167,7 +171,7 @@ export default function AssetAdvantagePage() {
 
       <ClosingCta
         eyebrow="Let’s connect"
-        image="/images/kaspian-glass-office.webp"
+        image={asset("/images/kaspian-glass-office.webp")}
         imageAlt="Office seen through glass"
       />
     </>
